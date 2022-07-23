@@ -35,9 +35,10 @@ const controller = {
  	},
 
 // 	// Update - Form to edit
-// 	edit: (req, res) => {
+ 	edit: (req, res) => {
+		res.render("product-edit-form");
 // 		// Do the magic
-// 	},
+ 	},
 // 	// Update - Method to update
 // 	update: (req, res) => {
 // 		// Do the magic
