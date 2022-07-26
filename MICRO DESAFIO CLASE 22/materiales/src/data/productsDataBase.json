@@ -142,5 +142,22 @@
   "category": "in-sale",
   "description": "Deja que la música dance cobre vida con EXTRA BASS™ Anima el ambiente con EXTRA BASS™1. Un radiador pasivo trabaja con el parlante monoaural para potenciar los tonos bajos y mejorar los graves, a pesar del tamaño compacto. ",
   "image": "img-parlante-sony.jpg"
+ },
+ {
+  "name": "Figura Luffy 4th Gear",
+  "price": "20000",
+  "discount": "",
+  "category": "",
+  "description": "es luffy papaa",
+  "id": 17
+ },
+ {
+  "name": "Figura Luffy 4th Gear",
+  "price": "20000",
+  "discount": "20",
+  "category": "in-sale",
+  "description": "La primera forma del gear 4 se llama boundman (弾む男バウンドマン Baundoman?, lit. «Hombre-Rebote»): Esto provoca que Luffy aumente notablemente su masa muscular de manera similar a como ya hizo con su transformación en Nightmare Luffy, pero con algunas diferencias; ya que con el gear 4 su cuerpo adopta una apariencia más redonda, y es imbuido en busoshoku haki. También se vuelve físicamente más alto, alcanzando de pie los cuatro metros de altura. Como efecto secundario, es incapaz de quedarse quieto en el suelo, y en su lugar constantemente rebota en el acto. También en esta forma es capaz de volar gracias a la propulsión elástica de la goma.",
+  "id": 18,
+  "image": "1658795181189-14177-logo_OP-MONKEY.D.LUFFY-GEAR4-WANOKUNI_1.jpg"
  }
 ]

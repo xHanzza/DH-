@@ -7,12 +7,11 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const controller = {
-	index: (req, res) => {
-		
+	index: (req, res) => {	
 		res.render("index", {products});
 	},
 	search: (req, res) => {
-		const searchWord = req.query.keywords;
+		const searchWord = req.query.keywords.toLowerCase();
 		const productResult = products.filter((item) => {
 			return item.name.toLowerCase().includes(searchWord);
 		}) 

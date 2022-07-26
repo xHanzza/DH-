@@ -15,23 +15,23 @@ const controller = {
 
 // 	// Detail - Detail from one product
 	detail: (req, res) => {
-		res.render("/detail/:id", products)
- 		// Do the magic
+		const idProduct = req.params.id;
+		const product = products.find( elemento => elemento.id == idProduct);
+		res.render("detail", {product: product});
  	},
 
 //  Create - Form to create
  	create: (req, res) => {
 		res.render("product-create-form");
-
  	},
-	
  	// Create -  Method to store
 	store: (req, res) => {	
-		 const newProduct = req.body;
-		 newProduct.id = products.length + 1;
-		 products.push(newProduct);
-		 fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
-		res.redirect('/')
+		const newProduct = req.body;
+		newProduct.id = products.length + 1;
+		newProduct.image = req.file.filename;
+		products.push(newProduct);
+		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
+		res.redirect('/');
  	},
 
 // 	// Update - Form to edit
@@ -44,11 +44,14 @@ const controller = {
 // 		// Do the magic
 // 	},
 
-// 	// Delete - Delete one product from DB
-// 	destroy : (req, res) => {
-// 		// Do the magic
-// 	}
-// };
-}
+	// Delete - Delete one product from DB
+	destroy : (req, res) => {
+		const idProduct = req.params.id;
+		const productsFilter = products.filter( elemento => elemento.id !== idProduct);
+		fs.writeFileSync(productsFilePath, JSON.stringify(productsFilter, null, ' '));
+		res.redirect('/products');
+	}
+};
+
 
 module.exports = controller;
